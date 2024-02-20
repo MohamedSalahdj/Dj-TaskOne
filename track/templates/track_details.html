@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="mt-5 text-primary text-center"> Track details</h1>
+    <div class="container">
+        <div class="row justify-content-between mt-5 ">
+            <div class="col-lg-6 col-md-8 col-sm-9">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="/" class='text-decoration-none'>Home</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="/tracks" class='text-decoration-none text-secondary'>Tracks</a></li>
+                    </ol>
+                  </nav>
+            </div>
+            <div class="card col-lg-4 col-md-8 col-sm-9 shadow" >
+                <div class="card-body">
+                    <h5 class="card-title  ">{{name}}</h5>
+                    <p class="card-text text-secondary mt-3 fs-7"><span class='text-black fs-6'>Details</span>: {{details}}</p>
+                    <span>Courses: </span>
+                    {% for course in courses %}
+                    <p class='d-inline-block me-1 text-secondary'>- {{course}}</p>
+                    {% endfor %}
+                </div>
+             <div>
+    </div>
+    <div>
+{% endblock content %}
